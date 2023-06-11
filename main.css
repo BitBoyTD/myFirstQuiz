@@ -1,0 +1,125 @@
+/* colors: dark-brown #321E1E, red #CD1818, light-brown #4E3636, blue 116D6E, */
+
+@font-face {
+    font-family: "lexend";
+    src: url(Lexend-VariableFont_wght.ttf);
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+#body {
+    background: #4E3636;
+}
+
+.button {
+    font-family: "lexend";
+    font-size: 2rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    color: #321E1E;
+    background: #4E3636;
+    border: solid 0.5rem #321E1E;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5)  ; 
+	-webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.5)  ; 
+	-moz-box-shadow: 0 0 40px rgba(0, 0, 0, 0.5)  ; 
+}
+
+.button:active {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5) inset; 
+	-webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.5) inset; 
+	-moz-box-shadow: 0 0 40px rgba(0, 0, 0, 0.5) inset; 
+}
+
+#startButton {
+    font-size: 4rem;
+    border-color:#321E1E;
+    color: #321E1E;
+    background: linear-gradient(90deg, rgba(17,109,110,1) 20%, rgba(205,24,24,1) 80%);
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#quizBox {
+    display: none;
+    flex-direction: column;
+    height: 80%;
+    width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+::placeholder {
+    color:#321E1E;
+    opacity: 1;
+}
+
+#questionDisplay {
+    width: 100%;
+    height: 10%;
+    font-family: "lexend";
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    color: #116D6E;
+    background: #4E3636;
+    border: solid 0.5rem #321E1E;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5)  ; 
+	-webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.5)  ; 
+	-moz-box-shadow: 0 0 40px rgba(0, 0, 0, 0.5)  ;
+    outline: none;
+}
+
+#answerInput {
+    width: 100%;
+    height: 10%;
+    font-family: "lexend";
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    color: #116D6E;
+    background: #4E3636;
+    border: solid 0.5rem #321E1E;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5)  ; 
+	-webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.5)  ; 
+	-moz-box-shadow: 0 0 40px rgba(0, 0, 0, 0.5)  ;
+    outline: none;
+}
+
+#submitButton {
+    width: auto;
+    color:#116D6E;
+}
+
+#nextButton {
+    display: none;
+    width: auto;
+    color: #116D6E;
+}
+
+#scoreDisplay {
+    display: none;
+    width: 50%;
+    height: 8%;
+    font-family: "lexend";
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    color: #116D6E;
+    background: #4E3636;
+    border: solid 0.5rem #321E1E;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5)  ; 
+	-webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.5)  ; 
+	-moz-box-shadow: 0 0 40px rgba(0, 0, 0, 0.5)  ;
+    outline: none;
+    text-align: center;
+}

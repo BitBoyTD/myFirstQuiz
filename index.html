@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+        <title>Quiz</title>
+    </head>
+
+    <body id="body">
+
+        <div id="container">
+            <button id="startButton" class="button" >START</button>
+            <div id="quizBox">
+                <input id="questionDisplay" type="text">
+                <input id="answerInput" type="text" placeholder="answer">
+                <button id="submitButton" class="button">SUBMIT</button>
+                <button id="nextButton" class="button">NEXT</button>
+            </div>
+            <input id="scoreDisplay" type="text">
+        </div>
+
+    </body>
+    
+</html>
+
+<script>
+
+    let questionsCompleted = 0;
+    let correctAnswers = 0;
+
+    const body = document.getElementById("body");
+    const startButton = document.getElementById("startButton");
+    const questionDisplay = document.getElementById("questionDisplay");
+    const answerInput = document.getElementById("answerInput");
+    const submitButton = document.getElementById("submitButton");
+    const nextButton = document.getElementById("nextButton");
+    const quizBox = document.getElementById("quizBox");
+    const scoreDisplay = document.getElementById("scoreDisplay");
+
+    const questions = ["Which is the largest planet in our solar system?", 
+    "Who painted the Mona Lisa?", "What is the capital of Australia?", 
+    "Which country is known as the: Land of the Rising Sun?", 
+    "What is the chemical symbol for the element gold?",
+    "Who wrote the play Romeo and Juliet?",
+    "What is the largest organ in the human body?",
+    "Which planet is known for its beautiful rings?",
+    "Which famous scientist developed the theory of relativity?",
+    "What is the tallest mountain in the world?",]
+    const answers = ["Jupiter", "Leonardo Da Vinci", "Canberra", "Japan", "Au", 
+    "William Shakespeare", "Skin", "Saturn", "Albert Einstein", "Mount Everest"]
+
+    startButton.addEventListener("click", function() {
+
+        quizBox.style.display = "flex";
+        questionDisplay.value = questions[0];
+        startButton.style.display = "none";
+        body.style.background = "linear-gradient(90deg, rgba(17,109,110,1) 20%, rgba(205,24,24,1) 80%)";
+
+    });
+
+    submitButton.addEventListener("click", function() {
+
+        nextButton.style.display = "block";
+        submitButton.style.display = "none";
+        if (answerInput.value.toLowerCase() === answers[questionsCompleted].toLowerCase() ) {
+        answerInput.style.color = "green";
+        correctAnswers += 1;
+        }
+        else {
+        answerInput.style.color = "#CD1818";
+        }
+        
+    });
+
+    nextButton.addEventListener("click", function() {
+
+        questionsCompleted += 1;
+        questionDisplay.value = questions[questionsCompleted];
+        answerInput.value = "";
+        submitButton.style.display = "block";
+        nextButton.style.display = "none";
+        answerInput.style.color = "#116D6E";
+        if (questionsCompleted === 10) {
+
+            quizBox.style.display = "none";
+            scoreDisplay.style.display = "block";
+            scoreDisplay.value = "you got " + correctAnswers + " out of 10 correct!";
+
+        };
+
+    });
+
+</script>
