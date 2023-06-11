@@ -14,6 +14,14 @@ body, html {
     background: #4E3636;
 }
 
+textarea {
+    resize: none;
+}
+
+textarea::-webkit-scrollbar {
+    width: 0;
+}
+
 .button {
     font-family: "lexend";
     font-size: 2rem;
@@ -79,6 +87,13 @@ body, html {
     outline: none;
 }
 
+@media (max-width:768px) {
+    #questionDisplay {
+        width: 90vw;
+        height: 54vh;
+    }
+}
+
 #answerInput {
     width: 100%;
     height: 10%;
@@ -93,6 +108,14 @@ body, html {
 	-webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.5)  ; 
 	-moz-box-shadow: 0 0 40px rgba(0, 0, 0, 0.5)  ;
     outline: none;
+}
+
+@media (max-width:768px) {
+    #answerInput {
+        height: 26vh;
+        width: 90vw;
+        margin: 4vh 0;
+    }
 }
 
 #submitButton {
@@ -122,4 +145,12 @@ body, html {
 	-moz-box-shadow: 0 0 40px rgba(0, 0, 0, 0.5)  ;
     outline: none;
     text-align: center;
+}
+
+@media (max-width:768px) {
+    #scoreDisplay {
+        font-size: 2rem;
+        width: 90vw;
+        height: 30vw;
+    }
 }
