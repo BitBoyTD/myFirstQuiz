@@ -89,7 +89,7 @@ textarea::-webkit-scrollbar {
 
 @media (max-width:768px) {
     #questionDisplay {
-        width: 90vw;
+        width: 80vw;
         height: 54vh;
     }
 }
@@ -113,7 +113,7 @@ textarea::-webkit-scrollbar {
 @media (max-width:768px) {
     #answerInput {
         height: 26vh;
-        width: 90vw;
+        width: 80vw;
         margin: 4vh 0;
     }
 }
@@ -150,7 +150,7 @@ textarea::-webkit-scrollbar {
 @media (max-width:768px) {
     #scoreDisplay {
         font-size: 2rem;
-        width: 90vw;
+        width: 80vw;
         height: 30vw;
     }
 }

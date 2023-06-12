@@ -63,13 +63,16 @@
 
         nextButton.style.display = "block";
         submitButton.style.display = "none";
-        if (answerInput.value.toLowerCase() === answers[questionsCompleted].toLowerCase() ) {
-        answerInput.style.color = "green";
-        correctAnswers += 1;
+        if (
+                answerInput.value.toLowerCase() === answers[questionsCompleted].toLowerCase() ||
+                 answerInput.value.toLowerCase() === answers[questionsCompleted].toLowerCase() + " "
+            ) {
+                answerInput.style.color = "green";
+                correctAnswers += 1;
         }
         else {
-        answerInput.style.color = "#CD1818";
-        answerInput.value = "Wrong! It was " + answers[questionsCompleted];
+            answerInput.style.color = "#CD1818";
+            answerInput.value = "Wrong! It was " + answers[questionsCompleted];
         }
         
     });
