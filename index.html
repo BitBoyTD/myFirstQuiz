@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="main.css">
         <title>Quiz</title>
+        <link rel="icon" type="image/x-icon" href="quizLogo.png">
     </head>
 
     <body id="body">
@@ -63,7 +64,10 @@
 
         nextButton.style.display = "block";
         submitButton.style.display = "none";
-        if (
+        if(answerInput.value === "") {
+            answerInput.value = "input answer here"
+        }
+        else if (
                 answerInput.value.toLowerCase() === answers[questionsCompleted].toLowerCase() ||
                  answerInput.value.toLowerCase() === answers[questionsCompleted].toLowerCase() + " "
             ) {
