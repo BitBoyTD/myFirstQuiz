@@ -61,9 +61,6 @@
     });
 
     submitButton.addEventListener("click", function() {
-
-        nextButton.style.display = "block";
-        submitButton.style.display = "none";
         if(answerInput.value === "") {
             answerInput.value = "input answer here"
         }
@@ -73,10 +70,14 @@
             ) {
                 answerInput.style.color = "green";
                 correctAnswers += 1;
+                nextButton.style.display = "block";
+                submitButton.style.display = "none";
         }
         else {
             answerInput.style.color = "#CD1818";
             answerInput.value = "Wrong! It was " + answers[questionsCompleted];
+            nextButton.style.display = "block";
+            submitButton.style.display = "none";
         }
         
     });
